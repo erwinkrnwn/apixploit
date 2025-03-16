@@ -1,0 +1,66 @@
+name: CI/CD Pipeline
+
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - 'presentation/**'
+  pull_request:
+    branches:
+      - main
+    paths-ignore:
+      - 'presentation/**'
+
+jobs:
+  #for Continuous Integration (CI)
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.13.2'
+
+      #install dependencies
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+      # run apixploit.py
+      - name: Run security scan
+        run: |
+          python apixploit.py --url http://192.168.18.9:8000
+        env:
+          TARGET_URL: "http://192.168.18.9:8000"
+
+      # validate report
+      - name: Check report generation
+        run: |
+          if [ -f security_report.html ]; then
+            echo "Security report generated successfully!"
+          else
+            echo "Security report generation failed!" >&2
+            exit 1
+          fi
+
+  #for Continuous Deployment (CD)
+  deploy:
+    needs: build-and-test
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push'
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      #upload security_report.html for artifact
+      - name: Upload security report
+        uses: actions/upload-artifact@v3
+        with:
+          name: security-report
+          path: security_report.html
