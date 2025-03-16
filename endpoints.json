@@ -1,0 +1,137 @@
+{
+    "http://192.168.18.9:8000/api/hhinovuln_GET": {
+        "method": "GET",
+        "path": "http://192.168.18.9:8000/api/hhinovuln",
+        "get_params": [
+            {
+                "name": "email",
+                "type": "string",
+                "required": true
+            }
+        ],
+        "post_body": {}
+    },
+    "http://192.168.18.9:8000/api/hhivuln_POST": {
+        "method": "POST",
+        "path": "http://192.168.18.9:8000/api/hhivuln",
+        "get_params": [],
+        "post_body": {
+            "email": {
+                "type": "string"
+            }
+        }
+    },
+    "http://192.168.18.9:8000/api/lfinovuln_GET": {
+        "method": "GET",
+        "path": "http://192.168.18.9:8000/api/lfinovuln",
+        "get_params": [
+            {
+                "name": "filename",
+                "type": "string",
+                "required": true
+            }
+        ],
+        "post_body": {}
+    },
+    "http://192.168.18.9:8000/api/lfivuln_POST": {
+        "method": "POST",
+        "path": "http://192.168.18.9:8000/api/lfivuln",
+        "get_params": [],
+        "post_body": {
+            "filename": {
+                "type": "string"
+            }
+        }
+    },
+    "http://192.168.18.9:8000/api/rfinovuln_GET": {
+        "method": "GET",
+        "path": "http://192.168.18.9:8000/api/rfinovuln",
+        "get_params": [
+            {
+                "name": "imagelink",
+                "type": "string",
+                "required": true
+            }
+        ],
+        "post_body": {}
+    },
+    "http://192.168.18.9:8000/api/rfivuln_POST": {
+        "method": "POST",
+        "path": "http://192.168.18.9:8000/api/rfivuln",
+        "get_params": [],
+        "post_body": {
+            "imagelink": {
+                "type": "string"
+            }
+        }
+    },
+    "http://192.168.18.9:8000/api/sqlinovuln_GET": {
+        "method": "GET",
+        "path": "http://192.168.18.9:8000/api/sqlinovuln",
+        "get_params": [
+            {
+                "name": "username",
+                "type": "string",
+                "required": true
+            }
+        ],
+        "post_body": {}
+    },
+    "http://192.168.18.9:8000/api/sqlivuln_POST": {
+        "method": "POST",
+        "path": "http://192.168.18.9:8000/api/sqlivuln",
+        "get_params": [],
+        "post_body": {
+            "password": {
+                "type": "string"
+            },
+            "username": {
+                "type": "string"
+            }
+        }
+    },
+    "http://192.168.18.9:8000/api/sstinovuln_GET": {
+        "method": "GET",
+        "path": "http://192.168.18.9:8000/api/sstinovuln",
+        "get_params": [
+            {
+                "name": "mathexp",
+                "type": "string",
+                "required": true
+            }
+        ],
+        "post_body": {}
+    },
+    "http://192.168.18.9:8000/api/sstivuln_POST": {
+        "method": "POST",
+        "path": "http://192.168.18.9:8000/api/sstivuln",
+        "get_params": [],
+        "post_body": {
+            "mathexp": {
+                "type": "string"
+            }
+        }
+    },
+    "http://192.168.18.9:8000/api/xssnovuln_GET": {
+        "method": "GET",
+        "path": "http://192.168.18.9:8000/api/xssnovuln",
+        "get_params": [
+            {
+                "name": "username",
+                "type": "string",
+                "required": true
+            }
+        ],
+        "post_body": {}
+    },
+    "http://192.168.18.9:8000/api/xssreflected_POST": {
+        "method": "POST",
+        "path": "http://192.168.18.9:8000/api/xssreflected",
+        "get_params": [],
+        "post_body": {
+            "username": {
+                "type": "string"
+            }
+        }
+    }
+}

