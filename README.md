@@ -13,7 +13,7 @@ Apixploit is an open-source tool to quickly find vulnerabilities like LFI and SQ
 
 1. **Clone the Repo**:
    ```bash
-   git clone https://github.com/username/apixploit.git
+   git clone https://github.com/erwinkrnwn/apixploit.git
    cd apixploit
 
 2. **Install**:
